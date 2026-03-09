@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dr. Todkar Dental Clinic — Dental Care in Anusuya Enclave</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--white:#fff;--off-white:#f8f7f4;--cream:#f0ede6;--text-dark:#1a1a1a;--text-mid:#4a4a4a;--accent:#1d6b8a;--accent-light:#e8f4f8;--accent-dark:#124d65;--border:#e5e0d8;--gold:#c9a84c}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;color:var(--text-dark);background:var(--white);line-height:1.6;-webkit-font-smoothing:antialiased}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;padding:1.25rem 5%;background:rgba(255,255,255,.95);backdrop-filter:blur(10px);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--accent-dark);text-decoration:none}
+.nav-cta{background:var(--accent);color:#fff;padding:.6rem 1.4rem;border-radius:6px;text-decoration:none;font-size:.875rem;font-weight:500}
+.hero{min-height:100vh;display:flex;align-items:center;background:linear-gradient(135deg,var(--off-white),var(--cream));padding:8rem 5% 5rem;position:relative}
+.hero-inner{max-width:680px}
+.hero-badge{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent-light);color:var(--accent);padding:.4rem 1rem;border-radius:100px;font-size:.8rem;font-weight:500;margin-bottom:1.5rem}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(2.4rem,5vw,3.8rem);line-height:1.15;margin-bottom:1.25rem}
+.hero h1 span{color:var(--accent)}
+.hero p{font-size:1.125rem;color:var(--text-mid);margin-bottom:2.5rem;max-width:540px;line-height:1.75}
+.hero-actions{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{display:inline-flex;align-items:center;gap:.5rem;background:var(--accent);color:#fff;padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:1rem;box-shadow:0 4px 15px rgba(29,107,138,.25)}
+.btn-secondary{display:inline-flex;align-items:center;gap:.5rem;background:transparent;color:var(--accent);padding:.9rem 2rem;border-radius:8px;text-decoration:none;font-weight:500;font-size:1rem;border:1.5px solid var(--accent)}
+.trust-bar{background:var(--accent-dark);color:#fff;padding:1.25rem 5%;display:flex;justify-content:center;gap:3rem;flex-wrap:wrap}
+.trust-item{display:flex;align-items:center;gap:.6rem;font-size:.875rem;opacity:.9}
+section{padding:5rem 5%}
+.section-label{font-size:.75rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.75rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.2;margin-bottom:1rem}
+.section-sub{font-size:1rem;color:var(--text-mid);max-width:560px;line-height:1.7;margin-bottom:3rem}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.service-card{background:var(--off-white);border:1px solid var(--border);border-radius:12px;padding:2rem;transition:all .25s}
+.service-card:hover{border-color:var(--accent);box-shadow:0 8px 30px rgba(29,107,138,.1)}
+.service-icon{font-size:2rem;margin-bottom:1rem}
+.service-card h3{font-size:1.05rem;font-weight:600;margin-bottom:.6rem}
+.service-card p{font-size:.9rem;color:var(--text-mid);line-height:1.65}
+.why{background:var(--off-white)}
+.why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2rem}
+.why-item{display:flex;gap:1rem}
+.why-num{font-family:'Playfair Display',serif;font-size:2.5rem;color:var(--accent);opacity:.25;line-height:1;min-width:48px;font-weight:700}
+.why-item h4{font-size:1rem;font-weight:600;margin-bottom:.4rem}
+.why-item p{font-size:.875rem;color:var(--text-mid);line-height:1.65}
+.process-steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;position:relative}
+.process-steps::before{content:'';position:absolute;top:28px;left:10%;right:10%;height:1px;background:var(--border)}
+.process-step{text-align:center;padding:0 1.5rem;position:relative}
+.step-num{width:56px;height:56px;background:var(--accent);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 1.25rem;position:relative;z-index:1}
+.process-step h4{font-size:.95rem;font-weight:600;margin-bottom:.5rem}
+.process-step p{font-size:.825rem;color:var(--text-mid);line-height:1.6}
+.testimonials{background:var(--cream)}
+.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem}
+.testimonial-card{background:#fff;border-radius:12px;padding:2rem;border:1px solid var(--border)}
+.stars{color:var(--gold);font-size:1rem;margin-bottom:1rem;letter-spacing:.1em}
+.testimonial-card blockquote{font-size:.95rem;color:var(--text-mid);line-height:1.7;font-style:italic;margin-bottom:1.25rem}
+.testimonial-author{font-size:.85rem;font-weight:600}
+.testimonial-role{font-size:.8rem;color:#7a7a7a}
+.faq-list{max-width:720px}
+.faq-item{border-bottom:1px solid var(--border);padding:1.5rem 0}
+.faq-item h4{font-size:1rem;font-weight:600;margin-bottom:.6rem}
+.faq-item p{font-size:.9rem;color:var(--text-mid);line-height:1.7}
+.contact{background:linear-gradient(135deg,var(--accent-dark),var(--accent));color:#fff;text-align:center}
+.contact .section-label{color:rgba(255,255,255,.6)}
+.contact .section-title{color:#fff}
+.contact .section-sub{color:rgba(255,255,255,.8);margin:0 auto 2.5rem}
+.contact-cards{display:flex;justify-content:center;gap:1.5rem;flex-wrap:wrap;margin-bottom:2.5rem}
+.contact-card{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:1.5rem 2rem;text-align:center;min-width:180px;text-decoration:none;color:#fff}
+.contact-card .cc-icon{font-size:1.75rem;margin-bottom:.5rem}
+.contact-card .cc-label{font-size:.75rem;opacity:.7;margin-bottom:.25rem}
+.contact-card .cc-value{font-size:1rem;font-weight:600}
+.btn-white{display:inline-flex;align-items:center;gap:.5rem;background:#fff;color:var(--accent-dark);padding:1rem 2.5rem;border-radius:8px;text-decoration:none;font-weight:700;font-size:1rem;box-shadow:0 4px 20px rgba(0,0,0,.2)}
+footer{background:var(--text-dark);color:rgba(255,255,255,.5);text-align:center;padding:2rem 5%;font-size:.8rem}
+footer strong{color:rgba(255,255,255,.8)}
+@media(max-width:640px){.trust-bar{gap:1.5rem}.process-steps::before{display:none}.hero-actions{flex-direction:column}}
+</style>
+</head>
+<body>
+<nav><a href="#" class="nav-logo">Dr. Todkar Dental Clinic</a><a href="#contact" class="nav-cta">Book Appointment</a></nav>
+<section class="hero">
+<div class="hero-inner">
+<div class="hero-badge">✦ Trusted Dental Care · Anusuya Enclave, Pune</div>
+<h1>Your Smile Deserves <span>Expert Care</span></h1>
+<p>From routine cleanings to advanced cosmetic procedures, Dr. Todkar Dental Clinic delivers gentle, modern dentistry that puts your comfort first. Serving families in Anusuya Enclave and beyond.</p>
+<div class="hero-actions">
+<a href="tel:098238 77911" class="btn-primary">📞 Call 098238 77911</a>
+<a href="#services" class="btn-secondary">Explore Services →</a>
+</div>
+</div>
+</section>
+<div class="trust-bar">
+<div class="trust-item">⭐ Highly Rated on Google</div>
+<div class="trust-item">🦷 All Age Groups Welcome</div>
+<div class="trust-item">🏥 Sterilized Equipment</div>
+<div class="trust-item">📅 Flexible Appointments</div>
+</div>
+<section class="services" id="services">
+<div class="section-label">What We Offer</div>
+<h2 class="section-title">Comprehensive Dental Services</h2>
+<p class="section-sub">A full range of dental treatments under one roof — so you never need to go anywhere else for your oral health needs.</p>
+<div class="services-grid">
+<div class="service-card"><div class="service-icon">🪥</div><h3>Preventive Care</h3><p>Regular checkups, professional cleaning, scaling, and early detection of cavities or gum issues. Prevention is always better and cheaper than treatment.</p></div>
+<div class="service-card"><div class="service-icon">✨</div><h3>Cosmetic Dentistry</h3><p>Teeth whitening, veneers, bonding, and smile makeovers. Look and feel your best with treatments tailored to your facial features and goals.</p></div>
+<div class="service-card"><div class="service-icon">🦷</div><h3>Restorative Dentistry</h3><p>Fillings, crowns, bridges, and full mouth rehabilitation. We restore damaged or missing teeth to their natural function and appearance.</p></div>
+<div class="service-card"><div class="service-icon">🔩</div><h3>Dental Implants</h3><p>Permanent tooth replacement that looks, feels, and functions like your natural teeth. Titanium implants with a high long-term success rate.</p></div>
+<div class="service-card"><div class="service-icon">📐</div><h3>Orthodontics</h3><p>Traditional braces and clear aligners for adults and children. Straighten your teeth discreetly and comfortably over time.</p></div>
+<div class="service-card"><div class="service-icon">👶</div><h3>Paediatric Dentistry</h3><p>Gentle, child-friendly dental care designed to build positive associations with oral health from a young age.</p></div>
+<div class="service-card"><div class="service-icon">🚨</div><h3>Emergency Dentistry</h3><p>Toothache, broken tooth, knocked-out tooth — we prioritize urgent cases. Call us and we'll fit you in as quickly as possible.</p></div>
+<div class="service-card"><div class="service-icon">😴</div><h3>Root Canal Treatment</h3><p>Modern, painless root canal procedures. Save your natural tooth and eliminate infection without discomfort.</p></div>
+</div>
+</section>
+<section class="why" id="about">
+<div class="section-label">Why Choose Us</div>
+<h2 class="section-title">Dentistry You Can Trust</h2>
+<p class="section-sub">We combine clinical expertise with a patient-first approach.</p>
+<div class="why-grid">
+<div class="why-item"><div class="why-num">01</div><div><h4>Experienced Dental Team</h4><p>Years of specialized training and hands-on experience. Every case treated with the same precision.</p></div></div>
+<div class="why-item"><div class="why-num">02</div><div><h4>Modern Equipment</h4><p>Digital X-rays with 80% less radiation, intraoral cameras, and rotary endodontic systems.</p></div></div>
+<div class="why-item"><div class="why-num">03</div><div><h4>Strict Sterilization</h4><p>All instruments sterilized in autoclave machines after every patient. Your safety is non-negotiable.</p></div></div>
+<div class="why-item"><div class="why-num">04</div><div><h4>Transparent Pricing</h4><p>Full treatment plan with costs before we begin. No hidden charges, no surprise bills.</p></div></div>
+<div class="why-item"><div class="why-num">05</div><div><h4>Comfortable Environment</h4><p>Designed to calm dental anxiety. We explain every step before we do it.</p></div></div>
+<div class="why-item"><div class="why-num">06</div><div><h4>Convenient Location</h4><p>Located in Anusuya Enclave, Pune, with easy parking and flexible appointment slots.</p></div></div>
+</div>
+</section>
+<section class="process">
+<div class="section-label">Your First Visit</div>
+<h2 class="section-title">Simple, Stress-Free Process</h2>
+<p class="section-sub">From booking to walking out with a healthier smile.</p>
+<div class="process-steps">
+<div class="process-step"><div class="step-num">1</div><h4>Book Appointment</h4><p>Call us or walk in. Same-day slots often available.</p></div>
+<div class="process-step"><div class="step-num">2</div><h4>Consultation & X-Ray</h4><p>Thorough oral examination and digital X-ray.</p></div>
+<div class="process-step"><div class="step-num">3</div><h4>Treatment Plan</h4><p>We walk you through what's needed and what it costs. No pressure.</p></div>
+<div class="process-step"><div class="step-num">4</div><h4>Treatment & Aftercare</h4><p>Full comfort support and clear aftercare instructions.</p></div>
+</div>
+</section>
+<section class="testimonials">
+<div class="section-label">Patient Stories</div>
+<h2 class="section-title">What Our Patients Say</h2>
+<p class="section-sub">Real feedback from patients in Anusuya Enclave and nearby areas.</p>
+<div class="testimonials-grid">
+<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>"The doctor was extremely patient and explained everything clearly. Best dental experience I've had."</blockquote><div class="testimonial-author">Priya S.</div><div class="testimonial-role">Anusuya Enclave, Pune</div></div>
+<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>"I was terrified of root canals. They made it completely painless. Highly recommend."</blockquote><div class="testimonial-author">Rahul M.</div><div class="testimonial-role">Pune</div></div>
+<div class="testimonial-card"><div class="stars">★★★★★</div><blockquote>"Brought my 6-year-old here and she actually enjoyed it. Great clinic for the whole family."</blockquote><div class="testimonial-author">Anita K.</div><div class="testimonial-role">Anusuya Enclave</div></div>
+</div>
+</section>
+<section class="faq">
+<div class="section-label">Common Questions</div>
+<h2 class="section-title">Frequently Asked Questions</h2>
+<div class="faq-list">
+<div class="faq-item"><h4>How often should I visit the dentist?</h4><p>For most people, twice a year for routine cleanings and checkups is ideal.</p></div>
+<div class="faq-item"><h4>Is teeth whitening safe?</h4><p>Yes, professional whitening supervised by a dentist is safe and gives even results.</p></div>
+<div class="faq-item"><h4>Are dental implants permanent?</h4><p>With proper care, implants can last decades — often a lifetime.</p></div>
+<div class="faq-item"><h4>Does a root canal hurt?</h4><p>With modern anaesthesia, root canals are no more uncomfortable than a routine filling.</p></div>
+<div class="faq-item"><h4>When should my child's first visit be?</h4><p>By their first birthday or within 6 months of the first tooth appearing.</p></div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="section-label">Get In Touch</div>
+<h2 class="section-title">Book Your Appointment Today</h2>
+<p class="section-sub">Don't wait for a toothache. We're right here in Anusuya Enclave.</p>
+<div class="contact-cards">
+<a href="tel:098238 77911" class="contact-card"><div class="cc-icon">📞</div><div class="cc-label">Call Us</div><div class="cc-value">098238 77911</div></a>
+<div class="contact-card"><div class="cc-icon">📍</div><div class="cc-label">Location</div><div class="cc-value">Anusuya Enclave, Pune</div></div>
+<div class="contact-card"><div class="cc-icon">🕐</div><div class="cc-label">Hours</div><div class="cc-value">Mon–Sat 9AM–8PM</div></div>
+</div>
+<a href="tel:098238 77911" class="btn-white">📞 Call Now to Book</a>
+</section>
+<footer><p>© 2026 <strong>Dr. Todkar Dental Clinic</strong> · Anusuya Enclave, Pune · All rights reserved</p><p style="margin-top:.5rem">Website by <strong>garvinchanderia.com</strong></p></footer>
+</body>
+</html>
